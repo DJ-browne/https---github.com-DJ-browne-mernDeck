@@ -10,7 +10,7 @@ export async function createCards(
     const response = await fetch(`${API_url}/decks/${id}/cards`, {
       method: "POST",
       body: JSON.stringify({
-        text,
+        cards:text,
       }),
       headers: {
         "Content-Type": "application/json",
@@ -26,6 +26,6 @@ export async function createCards(
     return data;
   } catch (error) {
     console.error("Failed to fetch", error);
-    throw error; // Re-throwing the error to let the calling function know about it.
+    throw error; 
   }
 }

@@ -5,13 +5,13 @@ export async function createCardForDeckController(req:Request, res:Response) {
     
     try {
         const {id} = req.params;        
-        const {text} = req.body;
+        const {cards} = req.body;
         const deckData = await Deck.findById(id);
         
         if(!deckData) {
             return res.sendStatus(400).send('not found')
         }
-        deckData.text.push(text);
+        deckData.cards.push(cards);
         await deckData.save();
         res.json(deckData);
 

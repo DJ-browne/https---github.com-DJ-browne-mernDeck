@@ -8,6 +8,7 @@ import {createDecksController} from './controllers/createDecksController'
 import {deleteDecksController} from './controllers/deleteDecksController'
 import { createCardForDeckController } from './controllers/createCardForDeckController';
 import { getDeckController } from './controllers/getDeckController';
+import { deleteCardOnDeckController } from './controllers/deleteCardOnDeckController';
 
 
 dotenv.config();
@@ -23,6 +24,7 @@ app.get('/decks', getDecksController);
 app.delete('/decks/:id', deleteDecksController);
 app.post('/decks/:id/cards', createCardForDeckController);
 app.get('/decks/:id', getDeckController); 
+app.delete('/decks/:id/cards/:index', deleteCardOnDeckController);
 
 
 mongoose.connect(process.env.MONGODB!)

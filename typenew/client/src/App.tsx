@@ -26,7 +26,7 @@ function App() {
 
   useEffect(() => {
     async function fetchDecks() {
-      const decksData = await getDecks();
+      const decksData = await getDecks();      
       setDecks(decksData);
     }
     fetchDecks();
