@@ -46,7 +46,9 @@ export default function Deck() {
   }, [id]);
 
   return (
+    <div>
     <div className="Deck">
+      <h1>{deck?.title}</h1>
       <div className="cards">
         {cards.map((card, index) => (
           <li key={index}>
@@ -69,6 +71,7 @@ export default function Deck() {
         />
         <button>Create Card</button>
       </form>
+    </div>
     </div>
   );
 }

@@ -33,7 +33,9 @@ function App() {
   }, []);
 
   return (
+    <div className="container">
     <div className="App">
+      <h1>Your Decks</h1>
       <div className="decks">
         {decks.map((deck)=>(
           <li key={deck._id}>
@@ -56,6 +58,7 @@ function App() {
         />
         <button>Create Deck</button>
       </form>
+    </div>
     </div>
   );
 }
