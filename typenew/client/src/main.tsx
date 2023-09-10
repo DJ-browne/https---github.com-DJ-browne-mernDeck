@@ -5,6 +5,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Deck from './Deck.tsx'
 import Header from './Header.tsx'
+import Login from './Login.tsx'
 
 const router = createBrowserRouter([{
   path:'/',
@@ -13,6 +14,10 @@ const router = createBrowserRouter([{
 {
   path:'/decks/:id',
   element: <Deck/>
+},
+{
+  path:'/login',
+  element: <Login/>
 }
 ],
 )

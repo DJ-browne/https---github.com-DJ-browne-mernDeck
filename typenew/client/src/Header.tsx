@@ -19,7 +19,7 @@ export default function Header() {
 
                 <div>
                     <div className='login'>
-                        <a href='/'>Login</a>
+                        <a href='/login'>Login</a>
                     </div>
                 </div>
 
