@@ -34,7 +34,8 @@
   background: white;
   border-radius: 10px;
   margin-bottom: 15px;
-}
+  padding: 5px 5px;
+  }
 
 .cards li button {
   position: absolute;
